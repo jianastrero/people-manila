@@ -1,77 +1,99 @@
 import React from 'react';
 import {
-    Button,
-    Image,
+    FlatList,
     SafeAreaView,
-    ScrollView,
     StatusBar,
-    StyleSheet, Switch,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View
+    StyleSheet, Text
 } from 'react-native';
 
+const DATA = [
+    { id: 0, name: 'John Doe' },
+    { id: 1, name: 'Jane Smith' },
+    { id: 2, name: 'Alice Johnson' },
+    { id: 3, name: 'Bob Brown' },
+    { id: 4, name: 'Charlie Davis' },
+    { id: 5, name: 'Diana Evans' },
+    { id: 6, name: 'Frank Green' },
+    { id: 7, name: 'Grace Harris' },
+    { id: 8, name: 'Henry Jackson' },
+    { id: 9, name: 'Ivy King' },
+    { id: 10, name: 'John Doe' },
+    { id: 11, name: 'Jane Smith' },
+    { id: 12, name: 'Alice Johnson' },
+    { id: 13, name: 'Bob Brown' },
+    { id: 14, name: 'Charlie Davis' },
+    { id: 15, name: 'Diana Evans' },
+    { id: 16, name: 'Frank Green' },
+    { id: 17, name: 'Grace Harris' },
+    { id: 18, name: 'Henry Jackson' },
+    { id: 19, name: 'Ivy King' },
+    { id: 20, name: 'John Doe' },
+    { id: 21, name: 'Jane Smith' },
+    { id: 22, name: 'Alice Johnson' },
+    { id: 23, name: 'Bob Brown' },
+    { id: 24, name: 'Charlie Davis' },
+    { id: 25, name: 'Diana Evans' },
+    { id: 26, name: 'Frank Green' },
+    { id: 27, name: 'Grace Harris' },
+    { id: 28, name: 'Henry Jackson' },
+    { id: 29, name: 'Ivy King' },
+    { id: 30, name: 'John Doe' },
+    { id: 31, name: 'Jane Smith' },
+    { id: 32, name: 'Alice Johnson' },
+    { id: 33, name: 'Bob Brown' },
+    { id: 34, name: 'Charlie Davis' },
+    { id: 35, name: 'Diana Evans' },
+    { id: 36, name: 'Frank Green' },
+    { id: 37, name: 'Grace Harris' },
+    { id: 38, name: 'Henry Jackson' },
+    { id: 39, name: 'Ivy King' },
+    { id: 40, name: 'John Doe' },
+    { id: 41, name: 'Jane Smith' },
+    { id: 42, name: 'Alice Johnson' },
+    { id: 43, name: 'Bob Brown' },
+    { id: 44, name: 'Charlie Davis' },
+    { id: 45, name: 'Diana Evans' },
+    { id: 46, name: 'Frank Green' },
+    { id: 47, name: 'Grace Harris' },
+    { id: 48, name: 'Henry Jackson' },
+    { id: 49, name: 'Ivy King' },
+    { id: 50, name: 'John Doe' },
+    { id: 51, name: 'Jane Smith' },
+    { id: 52, name: 'Alice Johnson' },
+    { id: 53, name: 'Bob Brown' },
+    { id: 54, name: 'Charlie Davis' },
+    { id: 55, name: 'Diana Evans' },
+    { id: 56, name: 'Frank Green' },
+    { id: 57, name: 'Grace Harris' },
+    { id: 58, name: 'Henry Jackson' },
+    { id: 59, name: 'Ivy King' },
+    { id: 60, name: 'John Doe' },
+    { id: 61, name: 'Jane Smith' },
+    { id: 62, name: 'Alice Johnson' },
+    { id: 63, name: 'Bob Brown' },
+    { id: 64, name: 'Charlie Davis' },
+    { id: 65, name: 'Diana Evans' },
+    { id: 66, name: 'Frank Green' },
+    { id: 67, name: 'Grace Harris' },
+    { id: 68, name: 'Henry Jackson' },
+    { id: 69, name: 'Ivy King' },
+];
+
 export default function App() {
-    const [value, setValue] = React.useState('');
-    const [switchValue, setSwitchValue] = React.useState(false);
+
 
     return (
         <SafeAreaView>
             <StatusBar backgroundColor="black" />
-            <ScrollView>
-                <View style={{
-                    width: 100,
-                    height: 100,
-                    backgroundColor: 'red'
-                }} />
-                <Text
-                    style={{
-                        fontWeight: 'bold',
-                        fontSize: 24,
-                        fontStyle: 'italic',
-                        color: 'orange'
-                    }}>Hello, World!</Text>
-                <Image
-                    source={{ uri: 'https://placedog.net/720/520' }}
-                    style={{
-                        width: '100%',
-                        height: 520
-                    }}/>
-                <TextInput
-                    value={value}
-                    placeholder="placeholder"
-                    onChangeText={newValue => setValue(newValue)}
-                    style={{
-                        paddingHorizontal: 24,
-                        paddingVertical: 12,
-                        borderColor: 'black',
-                        borderWidth: 1,
-                        borderRadius: 16
-                    }}/>
-                <Button
-                    title='My Button'
-                    color='magenta'
-                    onPress={() => {}} />
-                <TouchableOpacity
-                    onPress={() => {}}
-                    style={{
-                        paddingHorizontal: 24,
-                        paddingVertical: 12,
-                        borderRadius: 16,
-                        backgroundColor: 'yellow'
-                    }}>
-                    <Text>Hello World!</Text>
-                </TouchableOpacity>
-                <Switch
-                    value={switchValue}
-                    onValueChange={newSwitchValue => setSwitchValue(newSwitchValue)}
-                    thumbColor='red'
-                    trackColor={{
-                        true: 'blue',
-                        false: 'green'
-                    }}/>
-            </ScrollView>
+            <FlatList
+                data={DATA}
+                renderItem={ ({item}) => (
+                    <Text style={{
+                        padding: 12,
+                        borderBottomWidth: 1,
+                        borderBottomColor: 'orange'
+                    }}>{item.name}</Text>
+                )} />
         </SafeAreaView>
     );
 }
