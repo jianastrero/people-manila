@@ -17,7 +17,9 @@ export default function App() {
                 value={inputValue}
                 onValueChange={newInputValue => setInputValue(newInputValue)}
                 placeholder='Placeholder from props' />
-            <MyButton />
+            <MyButton
+                title='Text from props'
+                onPress={() => {}}/>
         </SafeAreaView>
     );
 }
