@@ -6,6 +6,7 @@ import {
 import {myTheme, colors} from "../src/theme/MyTheme";
 import MyTextInput from "../src/components/MyTextInput";
 import MyButton from "../src/components/MyButton";
+import {Link} from "expo-router";
 
 export default function App() {
     const [inputValue, setInputValue] = React.useState('');
@@ -20,6 +21,7 @@ export default function App() {
             <MyButton
                 title='Text from props'
                 onPress={() => {}}/>
+            <Link href='/settings'>Go to Settings</Link>
         </SafeAreaView>
     );
 }
