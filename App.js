@@ -1,19 +1,16 @@
 import React from 'react';
 import {
-    ActivityIndicator,
+    Alert,
     SafeAreaView,
-    SectionList,
     StatusBar,
-    StyleSheet, Text
+    StyleSheet,
 } from 'react-native';
 
 export default function App() {
+    Alert.alert('Hi, Alert', 'This is a message for the alert!');
     return (
         <SafeAreaView>
             <StatusBar backgroundColor="black" />
-            <ActivityIndicator
-                color='blue'
-                size='large' />
         </SafeAreaView>
     );
 }
