@@ -18,7 +18,10 @@ const styles = StyleSheet.create({
         backgroundColor: colors.primary,
         borderRadius: 100,
         shadowColor: colors.dark,
-        elevation: 4
+        elevation: 4,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     buttonText: {
         color: colors.light,
