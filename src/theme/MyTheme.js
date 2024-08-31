@@ -11,8 +11,6 @@ export const myTheme = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: colors.light,
-        alignItems: 'center',
-        justifyContent: 'center',
         padding: 12
     },
     horizontal: {
@@ -21,11 +19,16 @@ export const myTheme = StyleSheet.create({
     vertical: {
         flexDirection: 'column'
     },
-    textInput: {
-        borderRadius: 16,
-        borderWidth: 1,
-        borderColor: colors.dark,
-        paddingVertical: 12,
-        paddingHorizontal: 24
+    spacer: {
+        width: 16,
+        height: 16
+    },
+    widthFull: {
+        width: '100%',
+    },
+    h1: {
+        color: colors.dark,
+        fontWeight: 'black',
+        fontSize: 24,
     }
 });

@@ -1,4 +1,4 @@
-import {StyleSheet, TextInput} from "react-native";
+import {StyleSheet, Text, TextInput, View} from "react-native";
 import {colors} from "../theme/MyTheme";
 import React from "react";
 
@@ -9,11 +9,14 @@ export default function MyTextInput({
                                         style = {}
                                     }) {
     return (
-        <TextInput
-            value={value}
-            onChangeText={newValue => onValueChange(newValue)}
-            placeholder={placeholder}
-            style={[styles.textInput, style]}/>
+        <View>
+            <Text>{placeholder}</Text>
+            <TextInput
+                value={value}
+                onChangeText={newValue => onValueChange(newValue)}
+                placeholder={placeholder}
+                style={[styles.textInput, style]}/>
+        </View>
     );
 }
 
@@ -23,6 +26,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: colors.dark,
         paddingVertical: 6,
-        paddingHorizontal: 16
+        paddingHorizontal: 16,
+        marginTop: 4
     }
 });
