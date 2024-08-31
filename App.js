@@ -1,53 +1,21 @@
 import React from 'react';
 import {
-    Button,
-    Image,
     SafeAreaView,
-    ScrollView,
     StatusBar,
-    StyleSheet, Switch,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View
+    StyleSheet, TextInput
 } from 'react-native';
 
 export default function App() {
     const [value, setValue] = React.useState('');
-    const [switchValue, setSwitchValue] = React.useState(false);
 
     return (
         <SafeAreaView style={[styles.container, styles.widthFull]}>
             <StatusBar backgroundColor="black" />
-            <ScrollView style={styles.widthFull}>
-                <View style={styles.redBlock} />
-                <Text style={styles.orangeText}>Hello, World!</Text>
-                <Image
-                    source={{ uri: 'https://placedog.net/720/520' }}
-                    style={styles.bigImage}/>
-                <TextInput
-                    value={value}
-                    placeholder="placeholder"
-                    onChangeText={newValue => setValue(newValue)}
-                    style={styles.textInput}/>
-                <Button
-                    title='My Button'
-                    color='magenta'
-                    onPress={() => {}} />
-                <TouchableOpacity
-                    onPress={() => {}}
-                    style={styles.touchableButton}>
-                    <Text>Hello World!</Text>
-                </TouchableOpacity>
-                <Switch
-                    value={switchValue}
-                    onValueChange={newSwitchValue => setSwitchValue(newSwitchValue)}
-                    thumbColor='red'
-                    trackColor={{
-                        true: 'blue',
-                        false: 'green'
-                    }}/>
-            </ScrollView>
+            <TextInput
+                value={value}
+                onChangeText={newValue => setValue(newValue)}
+                placeholder='TextInput with States'
+                style={[styles.textInput, styles.widthFull]}/>
         </SafeAreaView>
     );
 }
