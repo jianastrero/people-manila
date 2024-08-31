@@ -2,15 +2,18 @@ import {StyleSheet, TextInput} from "react-native";
 import {colors} from "../theme/MyTheme";
 import React from "react";
 
-export default function MyTextInput() {
-    const [value, setValue] = React.useState('');
-
+export default function MyTextInput({
+                                        value,
+                                        onValueChange,
+                                        placeholder = "",
+                                        style = {}
+                                    }) {
     return (
         <TextInput
             value={value}
-            onChangeText={newValue => setValue(newValue)}
-            placeholder='My Text Input'
-            style={styles.textInput}/>
+            onChangeText={newValue => onValueChange(newValue)}
+            placeholder={placeholder}
+            style={[styles.textInput, style]}/>
     );
 }
 
