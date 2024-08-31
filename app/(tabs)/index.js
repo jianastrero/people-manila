@@ -3,9 +3,9 @@ import {
     SafeAreaView,
     StatusBar,
 } from 'react-native';
-import {myTheme, colors} from "../src/theme/MyTheme";
-import MyTextInput from "../src/components/MyTextInput";
-import MyButton from "../src/components/MyButton";
+import {myTheme, colors} from "../../src/theme/MyTheme";
+import MyTextInput from "../../src/components/MyTextInput";
+import MyButton from "../../src/components/MyButton";
 import {Link, router} from "expo-router";
 
 export default function App() {

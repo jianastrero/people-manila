@@ -1,5 +1,5 @@
 import {Text, View} from "react-native";
-import MyButton from "../../src/components/MyButton";
+import MyButton from "../../../src/components/MyButton";
 import {router} from "expo-router";
 
 export default function SettingsScreen() {

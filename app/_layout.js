@@ -4,23 +4,10 @@ export default function RootLayout() {
     return (
         <Stack>
             <Stack.Screen
-                name='index'
+                name='(tabs)'
                 options={{
-                    title: 'Home',
-                    headerTintColor: 'white',
-                    headerStyle: {
-                        backgroundColor: 'red',
-                    }
+                    headerShown: false
                 }}/>
-            <Stack.Screen
-                name='settings/index'
-                options={{
-                    title: 'Settings',
-                    headerTintColor: 'white',
-                    headerStyle: {
-                        backgroundColor: 'blue',
-                    }
-                }} />
         </Stack>
     );
 }
