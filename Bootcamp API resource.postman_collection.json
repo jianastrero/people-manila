@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "0025307a-44f5-471d-a291-c41d837d5270",
+		"name": "Bootcamp API resource",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3239825"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate-people",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/generate-people",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"generate-people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "people",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/people",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "person",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/people/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "person/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"age\": 69,\r\n    \"streetAddress\": \"69 Main St.\",\r\n    \"barangay\": \"Brgy. 69\",\r\n    \"city\": \"City of Manila\",\r\n    \"province\": \"Metro Manila\",\r\n    \"country\": \"Philippines\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/people/add",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"people",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "person/update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Johny Does\",\r\n    \"age\": 29,\r\n    \"streetAddress\": \"29 Main St.\",\r\n    \"barangay\": \"Brgy. 29\",\r\n    \"city\": \"City of Manila\",\r\n    \"province\": \"Metro Manila\",\r\n    \"country\": \"Philippines\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/people/update/25",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"people",
+						"update",
+						"25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "person/delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Johny Does\",\r\n    \"age\": 29,\r\n    \"streetAddress\": \"29 Main St.\",\r\n    \"barangay\": \"Brgy. 29\",\r\n    \"city\": \"City of Manila\",\r\n    \"province\": \"Metro Manila\",\r\n    \"country\": \"Philippines\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/people/delete/25",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"people",
+						"delete",
+						"25"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
