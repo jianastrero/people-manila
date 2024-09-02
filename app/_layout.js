@@ -1,6 +1,5 @@
 import {Stack} from "expo-router";
 import {colors} from "../src/theme/MyTheme";
-import Icon from "../src/components/Icon";
 
 export default function RootLayout() {
     return (
@@ -8,7 +7,8 @@ export default function RootLayout() {
             <Stack.Screen
                 name='(tabs)'
                 options={{
-                    headerShown: false
+                    headerShown: false,
+                    headerTitle: 'Main'
                 }}/>
             <Stack.Screen
                 name='person/[id]'
